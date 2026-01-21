@@ -10,32 +10,33 @@
 
 <div class="w-11/12 mx-auto my-2 ">
     @if ($customer->count()>0)
-<h1 class="text-5xl text-center text-blue-500 p-4 font-bold">All Our Customer</h1>
+<h1 class="text-5xl text-center text-amber-700 shadow-sm  p-4 font-bold">Add A Product</h1>
 <table class="border w-full border-collapse ">
     <tr>
         <th class="py-2 px-4 border">ID</th>
-        <th class="py-2 px-4 border">Profile</th>
         <th class="py-2 px-4 border">Name</th>
-        <th class="py-2 px-4 border">lastName</th>
-        <th class="py-2 px-4 border">Email</th>
-        <th class="py-2 px-4 border">Gender</th>
+        <th class="py-2 px-4 border">Price</th>
+        <th class="py-2 px-4 border">Quntity</th>
+        <th class="py-2 px-4 border">Product_id</th>
+        <th class="py-2 px-4 border">Image</th>
+        <th class="py-2 px-4 border">Descraption</th>
         
     </tr>
-    @foreach ($customer as $custom)
+    @foreach ($customer as $pro)
         <tr>
-            <td class="border py-1 px-2">{{ $custom->id }}</td>
-            <td class="border py-1 px-2"><img class="h-12 w-12 rounded-full" src="storage/{{ $custom->img_url }}" alt=""></td>
-            <td class="border py-1 px-2">{{ $custom->name }}</td>
-            <td class="border py-1 px-2">{{ $custom->lastName }}</td>
-            <td class="border py-1 px-2">{{ $custom->email }}</td>
-            <td class="border py-1 px-2">{{ $custom->gender}}</td>
-            
+            <td class="border py-1 px-2">{{ $pro->id }}</td>
+            <td class="border py-1 px-2">{{ $pro->name }}</td>
+            <td class="border py-1 px-2">{{ $pro->price }}</td>
+            <td class="border py-1 px-2">{{ $pro->quntity }}</td>
+            <td class="border py-1 px-2">{{ $pro->pro_id}}</td>
+            <td ><img class="h-12 w-12 rounded-full" src="storage/{{ $pro->img_url }}" alt=""></td>
+            <textarea class="border py-1 px-2 h-24"  name="descreption" id="">{{ $pro->descreption }}</textarea>
             <!-- <td class="border py-1 px-2"><a href="{{ URL('student/edit',$custom->id)}}">Edit</a></td> -->
         </tr>
     @endforeach
 </table>
 @else
-  <h1 class="text-center text-blue-500 text-3xl" >No Customer is Added</h1>
+  <h1 class="text-center text-blue-500 text-3xl" >No product is Added</h1>
 @endif
 </div>
 </body>

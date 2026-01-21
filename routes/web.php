@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\CustomerController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
@@ -38,7 +39,9 @@ Route::prefix('/customer')->controller(CustomerController::class)->group(functio
     Route::post('/add','create');
 });
 
-
+Route::prefix('/product')->controller(ProductController::class)->group(function(){
+    Route::view('/create','product.home');
+});
 // Route::get('/user',[StudentController::class,'index']);
 
 require __DIR__.'/auth.php';
