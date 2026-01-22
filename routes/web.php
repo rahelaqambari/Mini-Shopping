@@ -23,10 +23,10 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
-Route::prefix('user')->controller(StudentController::class)->middleware('teacher')->group(function(){
-    Route::get('/','index');
-Route::get('/allteacher','show');
-});
+// Route::prefix('user')->controller(StudentController::class)->middleware('teacher')->group(function(){
+//     Route::get('/','index');
+// Route::get('/allteacher','show');
+// });
 
 // Route::prefix('teacher')->controller(TeacherController::class)->group(function(){
 // Route::get('/','index');
@@ -40,7 +40,9 @@ Route::prefix('/customer')->controller(CustomerController::class)->group(functio
 });
 
 Route::prefix('/product')->controller(ProductController::class)->group(function(){
-    Route::view('/create','product.home');
+    Route::get('/','index');
+    Route::view('/create','product.add');
+    Route::post('/home','create');
 });
 // Route::get('/user',[StudentController::class,'index']);
 
