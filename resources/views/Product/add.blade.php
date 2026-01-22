@@ -28,6 +28,7 @@
     <input type="number" name="quntity" placeholder="Quntity" class="w-full outline-none border focus:border-0 focus:ring-1 ring-stone-400 py-2 px-4">
     <input type="text" name="madein" placeholder="Made In" class="w-full outline-none border focus:border-0 focus:ring-1 ring-stone-400 py-2 px-4">
     <input type="file" name="photo" accept="image/*" placeholder="Product Image" class="w-full outline-none border focus:border-0 focus:ring-1 ring-stone-400 py-2 px-4">
+    <textarea name="" class="w-full outline-none border focus:border-0 focus:ring-1 ring-stone-400 py-2 px-4" id=""></textarea>
 </form>
 </div>
 </body>
