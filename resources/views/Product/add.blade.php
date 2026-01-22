@@ -23,12 +23,11 @@
 <h1 class="text-center mt-3 text-4xl bg-blue-400 text-white">Add A Product</h1>
 <form method="post" action="{{ URL("product/home") }}" class="flex gap-4 w-full p-4 flex-col" enctype="multipart/form-data">
     @csrf
-<input value="" class="py-2 px-3 border  focus:outline-none " type="text" name="name" >
-<input value="" class="py-2 px-3 border  focus:outline-none " type="text" name="price" >
-<input value="" class="py-2 px-3 border  focus:outline-none " type="quntity" name="quntity" >
-<input value="" class="py-2 px-3 border  focus:outline-none " type="file" accept="image/*" name="image">
- <textarea class="border py-1 px-2 h-24"  name="descreption" id=""></textarea>
-<button class="text-3xl text-blue-800">Save</button>
+    <input type="text" name="name" placeholder="Name" class="w-full outline-none border focus:border-0 focus:ring-1 ring-stone-400 py-2 px-4">
+    <input type="number" name="price" placeholder="Price" class="w-full outline-none border focus:border-0 focus:ring-1 ring-stone-400 py-2 px-4">
+    <input type="number" name="quntity" placeholder="Quntity" class="w-full outline-none border focus:border-0 focus:ring-1 ring-stone-400 py-2 px-4">
+    <input type="text" name="madein" placeholder="Made In" class="w-full outline-none border focus:border-0 focus:ring-1 ring-stone-400 py-2 px-4">
+    <input type="file" name="photo" accept="image/*" placeholder="Product Image" class="w-full outline-none border focus:border-0 focus:ring-1 ring-stone-400 py-2 px-4">
 </form>
 </div>
 </body>
