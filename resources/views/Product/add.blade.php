@@ -20,16 +20,16 @@
 
 @endforeach
 @endif
-<h1 class="text-center mt-3 text-4xl text-stone-400 font-semibold">Add A Product</h1>
-<form method="post" action="{{ URL("product/home") }}" class="flex gap-4  p-4 flex-col w-8/12" enctype="multipart/form-data">
+<h1 class="text-center my-2 text-4xl text-stone-400 font-semibold font-serif">Add A Product</h1>
+<form method="post" action="{{ URL("product/home") }}" class="flex gap-4  p-4 flex-col w-7/12 bg-stone-100 rounded-md" enctype="multipart/form-data">
     @csrf
-    <input type="text" name="name" placeholder="Name" class="w-full outline-none border focus:border-0 rounded-sm focus:ring-1 ring-stone-400 py-2 px-4">
-    <input type="number" name="price" placeholder="Price" class="w-full outline-none border focus:border-0 rounded-sm focus:ring-1 ring-stone-400 py-2 px-4">
-    <input type="number" name="quntity" placeholder="Quntity" class="w-full outline-none border focus:border-0 rounded-sm focus:ring-1 ring-stone-400 py-2 px-4">
-    <input type="text" name="madein" placeholder="Made In" class="w-full outline-none border focus:border-0 rounded-sm focus:ring-1 ring-stone-400 py-2 px-4">
-    <input type="file" name="photo" accept="image/*" placeholder="Product Image" class="w-full outline-none rounded-sm border focus:border-0 focus:ring-1 ring-stone-400 py-2 px-4">
-    <textarea name="p" class="w-full outline-none border focus:border-0 focus:ring-1 ring-stone-400 py-2 px-4 rounded-sm h-24" id="" placeholder="Descraption"></textarea>
-    <button type="submit" class="bg-stone-400 py-2 px-4 w-fit text-white mx-auto rounded-md text-base font-medium">Save </button>
+    <input type="text" name="name" placeholder="Name" class="w-full outline-none border focus:border-0 rounded-sm focus:ring-0 ring-stone-400 py-2 px-4">
+    <input type="number" name="price" placeholder="Price" class="w-full outline-none border focus:border-0 rounded-sm focus:ring-0 ring-stone-400 py-2 px-4">
+    <input type="number" name="quntity" placeholder="Quntity" class="w-full outline-none border focus:border-0 rounded-sm focus:ring-0 ring-stone-400 py-2 px-4">
+    <input type="text" name="madein" placeholder="Made In" class="w-full outline-none border focus:border-0 rounded-sm focus:ring-0 ring-stone-400 py-2 px-4">
+    <input type="file" name="image" accept="image/*" placeholder="Product Image" class="w-full outline-none rounded-sm border focus:border-0 focus:ring-0 ring-stone-400 py-2 px-4">
+    <textarea name="p" class="w-full outline-none border focus:border-0 focus:ring-0 ring-stone-400 py-2 px-4 rounded-sm h-24" id="" placeholder="Descraption"></textarea>
+    <button type="submit" class="bg-stone-400 py-2 px-5 w-fit text-white mx-auto rounded-md text-base font-serif">Add</button>
 </form>
 </div>
 </body>

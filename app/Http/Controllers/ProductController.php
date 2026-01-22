@@ -3,15 +3,17 @@
 namespace App\Http\Controllers;
 
 use App\Models\Product;
+use App\Models\ProductDetailes;
 use Illuminate\Http\Request;
 
 class ProductController extends Controller
 {
     //
     public function index(){
-        $product = Product::all();
+        // $product = Product::all();
     //    $customer = User::where('user_type','customer')->get();
-        return view('product.home',['product'=>$product]);
+        // return view('product.home',['product'=>$product]);
+        return view('product.add');
     }
     public function create(Request $request){
         // $request->validate([
@@ -26,10 +28,14 @@ class ProductController extends Controller
         }
       $product = new Product(); 
       $product->name = $request->name;
-      $product->price = $request->price;
-      $product->quntity = $request->quntity;
-      $product->img_url = $imagepath;
       $product->save();
+      $ProductDetailes = new ProductDetailes();
+      $ProductDetailes->price = $request->price;
+      $ProductDetailes->quntity = $request->quntity;
+      $ProductDetailes->madeIn = $request->madein;
+      $ProductDetailes->img_url = $imagepath;
+      $ProductDetailes->p = $request->p;
+      $ProductDetailes->save();
       return redirect('/product');
     }
 }
