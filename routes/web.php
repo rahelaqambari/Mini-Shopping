@@ -42,7 +42,7 @@ Route::prefix('/customer')->controller(CustomerController::class)->group(functio
 Route::prefix('/product')->controller(ProductController::class)->group(function(){
     Route::get('/','index');
     Route::view('/create','product.add');
-    Route::post('/home','create');
+    Route::post('/create','create');
 });
 // Route::get('/user',[StudentController::class,'index']);
 

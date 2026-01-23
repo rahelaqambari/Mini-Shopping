@@ -21,7 +21,7 @@
 @endforeach
 @endif
 <h1 class="text-center my-2 text-4xl text-stone-400 font-semibold font-serif">Add A Product</h1>
-<form method="post" action="{{ URL("product/home") }}" class="flex gap-4  p-4 flex-col w-7/12 bg-stone-100 rounded-md" enctype="multipart/form-data">
+<form method="post" action="{{ URL("product/create") }}" class="flex gap-4  p-4 flex-col w-7/12 bg-stone-100 rounded-md" enctype="multipart/form-data">
     @csrf
     <input type="text" name="name" placeholder="Name" class="w-full outline-none border focus:border-0 rounded-sm focus:ring-0 ring-stone-400 py-2 px-4">
     <input type="number" name="price" placeholder="Price" class="w-full outline-none border focus:border-0 rounded-sm focus:ring-0 ring-stone-400 py-2 px-4">
