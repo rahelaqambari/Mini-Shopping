@@ -53,7 +53,16 @@
         </header>
         <x-homecoponent/>
         <div class="bg-stone-200 min-h-screen w-[105%]">
-            <h1>Fecherd Products</h1>
+            <h1 class="text-center text-4xl font-serif font-semibold p-6">Featured Products</h1>
+            <div class="w-full grid grid-cols-3 gap-8">
+                @if ($products->count()>0)
+                @foreach ($products as $pro)
+                <img src="{{ '/storage/'.$pro->productDetail->img_url }}" alt="">
+                @endforeach
+                @else
+                <h1>No Poduct is Exsited !</h1>
+                @endif
+            </div>
         </div>
 
         @if (Route::has('login'))

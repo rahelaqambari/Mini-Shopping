@@ -15,6 +15,13 @@ class ProductController extends Controller
         // return view('product.home',['product'=>$product]);
         return view('product.add');
     }
+
+    public function landing(){
+        $product = Product::with('productDetail');
+        foreach($product as $pro){
+        echo $pro;}
+        // return view('welcome',["porducts"=>$product]);
+    }
     public function create(Request $request){
         // $request->validate([
         //     "name"=>"required|min:3|max:12",
@@ -31,10 +38,10 @@ class ProductController extends Controller
       $product->save();
       $ProductDetailes = new ProductDetailes();
       $ProductDetailes->price = $request->price;
-      $ProductDetailes->quntity = $request->quntity;
-      $ProductDetailes->madeIn = $request->madein;
+      $ProductDetailes->quentity = $request->quentity;
+      $ProductDetailes->made_in = $request->made_in;
       $ProductDetailes->img_url = $imagepath;
-      $ProductDetailes->p = $request->p;
+      $ProductDetailes->descreption = $request->descreption;
       $ProductDetailes->save();
       return redirect('/product');
     }

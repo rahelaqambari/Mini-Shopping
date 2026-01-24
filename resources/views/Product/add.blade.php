@@ -25,10 +25,10 @@
     @csrf
     <input type="text" name="name" placeholder="Name" class="w-full outline-none border focus:border-0 rounded-sm focus:ring-0 ring-stone-400 py-2 px-4">
     <input type="number" name="price" placeholder="Price" class="w-full outline-none border focus:border-0 rounded-sm focus:ring-0 ring-stone-400 py-2 px-4">
-    <input type="number" name="quntity" placeholder="Quntity" class="w-full outline-none border focus:border-0 rounded-sm focus:ring-0 ring-stone-400 py-2 px-4">
-    <input type="text" name="madein" placeholder="Made In" class="w-full outline-none border focus:border-0 rounded-sm focus:ring-0 ring-stone-400 py-2 px-4">
+    <input type="number" name="quentity" placeholder="Quntity" class="w-full outline-none border focus:border-0 rounded-sm focus:ring-0 ring-stone-400 py-2 px-4">
+    <input type="text" name="made_in" placeholder="Made In" class="w-full outline-none border focus:border-0 rounded-sm focus:ring-0 ring-stone-400 py-2 px-4">
     <input type="file" name="image" accept="image/*" placeholder="Product Image" class="w-full outline-none rounded-sm border focus:border-0 focus:ring-0 ring-stone-400 py-2 px-4">
-    <textarea name="p" class="w-full outline-none border focus:border-0 focus:ring-0 ring-stone-400 py-2 px-4 rounded-sm h-24" id="" placeholder="Descraption"></textarea>
+    <textarea name="descreption" class="w-full outline-none border focus:border-0 focus:ring-0 ring-stone-400 py-2 px-4 rounded-sm h-24" id="" placeholder="Descraption"></textarea>
     <button type="submit" class="bg-stone-400 py-2 px-5 w-fit text-white mx-auto rounded-md text-base font-serif">Add</button>
 </form>
 </div>
