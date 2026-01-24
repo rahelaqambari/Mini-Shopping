@@ -21,7 +21,7 @@
         {{-- @endif --}}
     </head>
     <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
-        <header class="flex items-center justify-between w-[105%] -mt-14 bg-zinc-500 text-white py-8 px-3">
+        <header class="flex items-center justify-between w-[105%] -mt-12 bg-zinc-500 text-white py-8 px-3">
             <h1 class="text-3xl font-serif">ZARYAB Online Shopping</h1>
             @if (Route::has('login'))
                 <nav class="flex items-center justify-end gap-4 text-white">
