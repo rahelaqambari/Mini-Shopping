@@ -22,7 +22,7 @@
     </head>
     <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
         <header class="flex items-center justify-between w-[105%] -mt-12 bg-zinc-500 text-white py-8 px-3">
-            <h1 class="text-3xl font-serif">ZARYAB Online Shopping</h1>
+            <h1 class="text-4xl font-semibold font-serif">ZARYAB</h1>
             @if (Route::has('login'))
                 <nav class="flex items-center justify-end gap-4 text-white">
                     @auth
@@ -52,6 +52,9 @@
             @endif
         </header>
         <x-homecoponent/>
+        <div class="bg-stone-200 min-h-screen w-[105%]">
+            <h1>Fecherd Products</h1>
+        </div>
 
         @if (Route::has('login'))
             <div class="h-14.5 hidden lg:block"></div>
