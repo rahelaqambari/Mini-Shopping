@@ -52,7 +52,7 @@
             @endif
         </header>
         <x-homecoponent/>
-        <div class="bg-stone-200 min-h-screen w-[105%]">
+        <div class="bg-stone-200 min-h-screen w-[105%] -mb-40">
             <h1 class="text-center text-4xl font-serif font-semibold p-6">Featured Products</h1>
             <div class="w-9/12 mx-auto grid grid-cols-3 gap-8">
                 @if ($products->count()>0)
@@ -64,7 +64,7 @@
                     <p class="font-base">{{ $product->productDetail->price }} AFG</p>
                     <p class="font-base">{{ $product->productDetail->made_in }}</p>
                 </div>
-                <p class="text-gray-300 p-6">{{ $product->productDetail->descreption }}</p>
+                <p class="text-gray-400 p-4">{{ $product->productDetail->descreption }}</p>
                 </div>
                 @endforeach
                 @else
