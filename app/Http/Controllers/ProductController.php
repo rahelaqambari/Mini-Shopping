@@ -17,10 +17,11 @@ class ProductController extends Controller
     }
 
     public function landing(){
-        $product = Product::with('productDetail');
-        foreach($product as $pro){
-        echo $pro;}
-        // return view('welcome',["porducts"=>$product]);
+        $products = Product::with('productDetail')->get();
+        // foreach($products as $pro){
+        // echo $pro;}
+        // return $products;
+        return view('welcome', compact('products'));
     }
     public function create(Request $request){
         // $request->validate([
@@ -42,7 +43,8 @@ class ProductController extends Controller
       $ProductDetailes->made_in = $request->made_in;
       $ProductDetailes->img_url = $imagepath;
       $ProductDetailes->descreption = $request->descreption;
+      $ProductDetailes->product_id = $product->id;
       $ProductDetailes->save();
-      return redirect('/product');
+      return redirect('/');
     }
 }

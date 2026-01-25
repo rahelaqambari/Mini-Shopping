@@ -9,9 +9,7 @@ use App\Http\Middleware\TeacherMiaddleware;
 use App\Http\Middleware\StudentMiddleware;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [ProductController::class,'landing']);
 
 Route::get('/dashboard', function () {
     return view('dashboard');

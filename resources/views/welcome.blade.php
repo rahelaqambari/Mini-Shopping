@@ -54,10 +54,18 @@
         <x-homecoponent/>
         <div class="bg-stone-200 min-h-screen w-[105%]">
             <h1 class="text-center text-4xl font-serif font-semibold p-6">Featured Products</h1>
-            <div class="w-full grid grid-cols-3 gap-8">
+            <div class="w-9/12 mx-auto grid grid-cols-3 gap-8">
                 @if ($products->count()>0)
-                @foreach ($products as $pro)
-                <img src="{{ '/storage/'.$pro->productDetail->img_url }}" alt="">
+                @foreach ($products as $product)
+                <div class="border border-black rounded-md bg-white">
+                            <img class="w-full h-56 rounded-t-md" src="{{ '/storage/'.$product->productDetail->img_url }}" alt="">
+                <h1 class="text-3xl font-bold text-center">{{ $product->name }}</h1>
+                <div class="flex justify-between px-4 py-5">
+                    <p class="font-base">{{ $product->productDetail->price }} AFG</p>
+                    <p class="font-base">{{ $product->productDetail->made_in }}</p>
+                </div>
+                <p class="text-gray-300 p-6">{{ $product->productDetail->descreption }}</p>
+                </div>
                 @endforeach
                 @else
                 <h1>No Poduct is Exsited !</h1>
