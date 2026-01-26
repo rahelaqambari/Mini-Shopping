@@ -27,7 +27,7 @@ class coustomlisetber
         $user=  User::create([
             "name"=>$customer->name,
             "email"=>$customer->email,
-            "password"=>bcrypt("passw121314"),
+            "password"=>bcrypt("password1234"),
             "user_type"=>"customer",
         ]);
         $customer->user_id = $user->id;
