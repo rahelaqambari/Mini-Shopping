@@ -5,6 +5,7 @@ use App\Http\Controllers\ProductController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\StudentController;
 use App\Http\Controllers\TeacherController;
+use App\Http\Middleware\AdminGuard;
 use App\Http\Middleware\TeacherMiaddleware;
 use App\Http\Middleware\StudentMiddleware;
 use Illuminate\Support\Facades\Route;
@@ -31,7 +32,7 @@ Route::middleware('auth')->group(function () {
 // Route::get('/{id}','show');
 // });
 
-Route::prefix('/customer')->controller(CustomerController::class)->group(function(){
+Route::prefix('/customer')->controller(CustomerController::class)->middleware(AdminGuard::class)->group(function(){
     Route::get('/','index');
     Route::view('/create','customer.insert');
     Route::post('/add','create');
