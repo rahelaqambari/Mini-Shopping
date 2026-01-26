@@ -38,7 +38,7 @@ Route::prefix('/customer')->controller(CustomerController::class)->middleware(Ad
     Route::post('/add','create');
 });
 
-Route::prefix('/product')->controller(ProductController::class)->group(function(){
+Route::prefix('/product')->controller(ProductController::class)->middleware(AdminGuard::class)->group(function(){
     Route::get('/add','index');
     Route::post('/create','create');
 });

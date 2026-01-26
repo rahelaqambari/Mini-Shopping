@@ -21,7 +21,7 @@
         {{-- @endif --}}
     </head>
     <body class="bg-[#FDFDFC] dark:bg-[#0a0a0a] text-[#1b1b18] flex p-6 lg:p-8 items-center lg:justify-center min-h-screen flex-col">
-        <header class="flex items-center justify-between w-[105%] -mt-12 bg-zinc-500 text-white py-8 px-3">
+        <header class="flex items-center justify-between w-[105%] -mt-12 bg-purple-900 text-white py-8 px-3">
             <h1 class="text-4xl font-semibold font-serif">ZARYAB</h1>
             @if (Route::has('login'))
                 <nav class="flex items-center justify-end gap-4 text-white">
@@ -57,7 +57,7 @@
             <div class="w-9/12 mx-auto grid grid-cols-3 gap-8">
                 @if ($products->count()>0)
                 @foreach ($products as $product)
-                <div class="border border-black rounded-md bg-white">
+                <div class="border border-gray-600 rounded-md bg-stone-50">
                             <img class="w-full h-56 rounded-t-md" src="{{ '/storage/'.$product->productDetail->img_url }}" alt="">
                 <h1 class="text-3xl font-bold text-center">{{ $product->name }}</h1>
                 <div class="flex justify-between px-4 py-5">
